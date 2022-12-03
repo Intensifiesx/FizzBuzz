@@ -9,7 +9,6 @@
             To add more divisible numbers, insert {num, " "} into containter.
 */
 
-#include <iostream>
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -17,10 +16,11 @@ int main()
 {
     //Scalable divisble number with its saying
     map<int, string> container = {{3, "Fizz"}, {5, "Buzz"}, {7, "Fuzz"}}; 
-    int n = 105; //End value to iterate to
+    int lowerBound = 1, //Starting value
+        upperBound = 100; //Ending value
     
     //Iterate i to n : O(N)
-    for (int i = 1; i <= n; i++)
+    for (int i = lowerBound; i < upperBound + 1; i++)
     {
         string output = "";
         for (auto j : container) //O(1)
